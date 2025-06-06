@@ -55,6 +55,11 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/v1', routes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Chapter Performance Dashboard API is running.');
+});
+
 // MongoDB connection
 const connectDB = async () => {
     try {
